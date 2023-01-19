@@ -18,9 +18,11 @@
 		margin-right: auto;
 		align-items: center;
 		justify-content: space-between;
-
+		@media only screen and (max-width: $small) {
+			width: 85vw;
+		}
 		&__left {
-			width: 200px;
+			width: 180px;
 			height: 100%;
 			display: flex;
 
@@ -29,9 +31,11 @@
 				width: 100%;
 				display: flex;
 				align-items: center;
+
 				&__logo {
 					height: 80%;
 					width: 80%;
+					min-width: 80px;
 				}
 			}
 		}
@@ -40,11 +44,26 @@
 			flex-wrap: wrap;
 		}
 		&__right {
-			width: 10px;
+			width: fit-content;
 			display: flex;
-			height: 10px;
+			height: 100%;
+			align-items: center;
 			&__container {
+				flex-wrap: wrap;
+				align-items: center;
+				text-align: center;
+				width: fit-content;
+				margin-left: 10px;
 				&__logo {
+					width: 20px;
+
+					height: 30%;
+				}
+				&__item {
+					line-height: 1;
+					font-size: 0.9rem;
+					@media only screen and (max-width: $small) {
+					}
 				}
 			}
 		}
@@ -55,8 +74,25 @@
 	display: block;
 	&__list {
 		display: flex;
+		@media only screen and (max-width: $small) {
+			display: none;
+		}
 	}
 	&__item {
 		margin-left: 16px;
+	}
+}
+.header__sidebar__toggle {
+	margin-right: 24px;
+	font-size: 3px;
+	font-weight: 400;
+	width: 30px;
+	color: white;
+
+	@media only screen and (min-width: $small) {
+		display: none;
+	}
+	@media only screen and (max-width: $small) {
+		margin-right: 20px;
 	}
 }

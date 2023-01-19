@@ -1,12 +1,16 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./Components/Header/Header";
-
+import { Routes, Route, useParams, BrowserRouter } from "react-router-dom";
+import MainPages from "./pages/MainPages";
+import TestPages from "./pages/TestPages";
 const App = () => {
 	return (
-		<div>
-			<Header></Header>
-		</div>
+		<>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<MainPages />}></Route>
+					<Route path="/:userId" element={<TestPages></TestPages>} />
+				</Routes>
+			</BrowserRouter>
+		</>
 	);
 };
 
