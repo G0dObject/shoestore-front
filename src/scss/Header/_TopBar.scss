@@ -1,0 +1,41 @@
+@import "../variables";
+.top-bar {
+	width: auto;
+	position: relative;
+	font-size: 0.875rem;
+	background-color: $TopBarBackGroundColor;
+	color: white;
+	&__inner {
+		display: flex;
+		height: 40px;
+		width: $HeaderInnerWidth;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+		justify-content: space-between;
+
+		&__right {
+			display: flex;
+			align-items: center;
+
+			&__item {
+				display: flex;
+				margin-right: 6px;
+				align-items: center;
+			}
+		}
+		&__left {
+			display: flex;
+			align-items: center;
+
+			&__item {
+				display: flex;
+				margin-right: 24px;
+				&__icon {
+					text-align: center;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
