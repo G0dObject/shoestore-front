@@ -37,17 +37,23 @@ const Header = () => {
 					<div className="header__inner__center">
 						<div className="nav">
 							<ul className="nav__list">
-								<li className="nav__item">Женщинам</li>
-								<li className="nav__item">Мужчинам</li>
-								<li className="nav__item">Детям</li>
+								<Link to="/catalog/woman" className="nav__item">
+									Мужчинам
+								</Link>
+								<Link to="/catalog/man" className="nav__item">
+									Женщинам
+								</Link>
+								<Link to="/catalog/kids" className="nav__item">
+									Детям
+								</Link>
 							</ul>
 						</div>
 					</div>
 					<div className="header__inner__right">
-						<div className="header__inner__right__container">
+						<Link to="/Login" className="header__inner__right__container">
 							<People className="header__inner__right__container__logo"></People>
 							<div className="header__inner__right__container__item">Войти</div>
-						</div>
+						</Link>
 					</div>
 				</div>
 			</div>
