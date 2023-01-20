@@ -20,19 +20,18 @@ const Header = () => {
 			<div className="header">
 				<div className="header__inner">
 					<div className="header__inner__left">
-						<div className="header__inner__left__container">
+						<Link to="/" className="header__inner__left__container">
 							<NavBarIcon
 								className="header__sidebar__toggle"
 								toggle={toggle}
 							></NavBarIcon>
 
-							<NavBar
-								className={navVisible ? "sidenav show" : "sidenav hide"}
-								toggle={toggle}
-							></NavBar>
-
 							<Zenden className="header__inner__left__container__logo" />
-						</div>
+						</Link>
+						<NavBar
+							className={navVisible ? "sidenav show" : "sidenav hide"}
+							onClick={toggle}
+						></NavBar>
 					</div>
 					<div className="header__inner__center">
 						<div className="nav">

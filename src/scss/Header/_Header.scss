@@ -13,7 +13,7 @@
 	&__inner {
 		display: flex;
 		height: 100%;
-		width: $HeaderInnerWidth;
+		width: $InnerWidth;
 		margin-left: auto;
 		margin-right: auto;
 		align-items: center;
@@ -35,13 +35,18 @@
 				&__logo {
 					height: 80%;
 					width: 80%;
-					min-width: 80px;
+					min-width: 120px;
 				}
 			}
 		}
 		&__center {
 			display: flex;
 			flex-wrap: wrap;
+
+			align-items: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
 		}
 		&__right {
 			width: fit-content;
@@ -72,13 +77,16 @@
 
 .nav {
 	display: block;
+	height: 100%;
 	&__list {
 		display: flex;
 		@media only screen and (max-width: $small) {
 			display: none;
 		}
+		height: 100%;
 	}
 	&__item {
+		height: 100%;
 		margin-left: 16px;
 	}
 }

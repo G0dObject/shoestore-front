@@ -1,0 +1,54 @@
+@import "../variables";
+.page__main {
+	width: 100vw;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+
+	&__inner {
+		width: $InnerWidth;
+		margin-left: auto;
+		margin-right: auto;
+		@media only screen and (max-width: $medium) {
+			width: $InnerWidthSmall;
+		}
+	}
+}
+.categories-section {
+	&__main {
+		margin-top: 25px;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+		@media only screen and (max-width: $small) {
+		}
+	}
+
+	&__item {
+		background-color: aqua;
+		width: 23vw;
+		height: 23vw;
+
+		&.men {
+			background-color: #0066cb;
+		}
+		&.women {
+			background-color: #cb3398;
+		}
+		&.kids {
+			background-color: #6633cc;
+		}
+		@media only screen and (max-width: $medium) {
+			width: 30vw;
+			height: 30vw;
+		}
+		@media only screen and (max-width: $small) {
+			width: 80vw;
+			height: 80vw;
+			margin-top: 30px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

@@ -1,4 +1,4 @@
 interface NavBarProps {
-	toggle: Function;
+	onClick: () => void;
 	className: string;
 }

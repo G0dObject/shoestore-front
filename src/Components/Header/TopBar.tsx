@@ -1,6 +1,5 @@
 import React from "react";
 import "../../scss/Header/_import.scss";
-import icon from "../../res/LocationIcon.svg";
 import LocationIcon from "../../res/LocationIcon";
 import PhoneIcon from "../../res/PhoneIcon";
 
@@ -16,7 +15,10 @@ const TopBar = () => {
 				</div>
 				<div className="top-bar__inner__right__item">
 					<PhoneIcon className="top-bar__inner__right__item" />
-					<div className="top-bar__inner__right__item">8 800 600-22-02</div>
+
+					<a className="top-bar__inner__right__item" href="tel:+7000000-00-00">
+						+7(000)000-00-00
+					</a>
 				</div>
 			</div>
 		</div>
