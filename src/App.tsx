@@ -7,7 +7,10 @@ const App = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<MainPages />}></Route>
-					<Route path="/:userId" element={<TestPages></TestPages>} />
+					<Route path="/catalog/:category/:type/:id" element={<TestPages></TestPages>} />
+					<Route path="/catalog/:category/:type/" element={<TestPages></TestPages>} />
+					<Route path="/catalog/:category/" element={<TestPages></TestPages>} />
+					<Route path="*" element={<>Элемент не найден</>} />
 				</Routes>
 			</BrowserRouter>
 		</>

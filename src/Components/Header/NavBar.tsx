@@ -1,6 +1,7 @@
 import React from "react";
 import { Type } from "typescript";
 import "../../scss/Header/_import.scss";
+import {NavLink} from "react-router-dom";
 
 const NavBar = (props: NavBarProps) => {
 	return (
@@ -9,9 +10,9 @@ const NavBar = (props: NavBarProps) => {
 				<a className="closebtn" onClick={() => props.toggle()}>
 					&times;
 				</a>
-				<a href="#">Женщинам</a>
-				<a href="#">Мужчинам</a>
-				<a href="#">Детям</a>
+				<NavLink to="/catalog/category/woman">Женщинам</NavLink>
+				<NavLink to="/catalog/category/men">Мужчинам</NavLink>
+				<NavLink to="/catalog/category/kids">Детям</NavLink>
 			</div>
 		</div>
 	);
