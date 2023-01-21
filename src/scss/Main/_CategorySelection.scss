@@ -1,4 +1,4 @@
-@import "../variables";
+@import '../variables';
 .page__main {
 	width: 100vw;
 	height: 100%;
@@ -30,6 +30,18 @@
 		width: 23vw;
 		height: 23vw;
 
+		&__title {
+			margin-top: 10px;
+			text-align: center;
+			font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 2rem;
+			line-height: 1.5;
+		}
+
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
 		&.men {
 			background-color: #0066cb;
 		}
@@ -39,16 +51,18 @@
 		&.kids {
 			background-color: #6633cc;
 		}
+
 		@media only screen and (max-width: $medium) {
-			width: 30vw;
-			height: 30vw;
+			margin-left: auto;
+			margin-right: auto;
+			width: $InnerWidth;
+			height: auto;
+			margin-bottom: 50px;
 		}
 		@media only screen and (max-width: $small) {
 			width: 80vw;
 			height: 80vw;
-			margin-top: 30px;
-			margin-left: auto;
-			margin-right: auto;
+			margin-bottom: 70px;
 		}
 	}
 }
