@@ -5,13 +5,12 @@ import { useState } from "react";
 const Slider = (props: SliderProps) => {
 	const [slideIndex, setSlideIndex] = useState(1);
 	const slides = props.slides;
+
 	const onClickSetIndex = (value: number) => {
 		if (slideIndex + value > slides.length) {
 			setSlideIndex(1);
 			return;
 		} else if (slideIndex + value <= 0) {
-			console.log(slides.length);
-
 			setSlideIndex(slides.length);
 			return;
 		}
@@ -29,7 +28,7 @@ const Slider = (props: SliderProps) => {
 						<img
 							src={slide.src}
 							style={{
-								display: slide.id === slideIndex ? "none" : "block",
+								display: slide.id === slideIndex ? "block" : "none",
 							}}
 						/>
 					</div>
