@@ -1,8 +1,40 @@
-@import '../variables';
+@import "../variables";
 .swiper-container {
 	//margin-top: 10px;
 	border-top: 40px solid #52ae32;
-	height: 40vh;
+	height: fit-content;
 	width: 100vw;
-	background-color: #afafb1;
+	background-color: rgb(228, 226, 232);
+	&__card img {
+		height: 50vh;
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+		@media only screen and (max-width: $medium) {
+			height: 30vh;
+		}
+		@media only screen and (max-width: $small) {
+			height: 20vh;
+		}
+	}
+}
+.swiper-button-prev,
+.swiper-button-next {
+	position: absolute;
+	z-index: 10;
+	top: 40%;
+	right: 10%;
+	width: 35px;
+	height: 35px;
+
+	background: transparent;
+	border: 2px solid white;
+
+	border-radius: 50%;
+	-webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s, -webkit-transform 0.4s;
+}
+.swiper-button-prev {
+	left: 10%;
 }
