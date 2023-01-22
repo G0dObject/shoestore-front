@@ -17,6 +17,7 @@ const slides: Slider[] = [
 const Main = () => {
 	return (
 		<div className="page__main">
+			<div className="notification"></div>
 			<Slider slides={slides} className="swiper-container">
 				<img src="https://cdn.zenden.cloud/MaKYRQQbsC6VRYFpyomnLAncJZpTjOY1NHQlRNHkzzw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay85OGQvMjAwOTBxaHh1bG1wZmVuZjAxcGNvOWpraG1xbWlleG0uanBn.jpg"></img>
 			</Slider>
@@ -25,16 +26,16 @@ const Main = () => {
 					<div className="categories-section__main">
 						<Link
 							to="/catalog/woman"
-							className="categories-section__item women"
+							className="categories-section__item woman"
 						>
 							<div className="categories-section__item__title">Женщинам</div>
 							<div className="categories-selection__item__inner">
-								<div className="categories-selection__item__image">
+								<div className="categories-selection__item__inner__image">
 									<img src="https://cdn.zenden.cloud/Wh756l6gVPVCqEHmqlYAJNrG8D2Q9ogNI3l81P8OGJo/fit/500/500/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL3VmL2Q0OS9iNzhyMGtuMDM2NXllbDBtbmludGJyMDdueHJ5aWhreS5qcGc.jpg"></img>
 								</div>
 							</div>
 						</Link>
-						<Link to="/catalog/man" className="categories-section__item men">
+						<Link to="/catalog/man" className="categories-section__item man">
 							<div className="categories-section__item__title">Мужчинам</div>
 							<div className="categories-selection__item__inner">
 								<div className="categories-selection__item__inner__image">
@@ -52,19 +53,6 @@ const Main = () => {
 						</Link>
 					</div>
 				</div>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
 			</div>
 		</div>
 	);
