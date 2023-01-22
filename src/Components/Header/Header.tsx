@@ -8,14 +8,18 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
+import Authorization from "../Auth/Authorization";
 const Header = () => {
 	const [navVisible, setNavVisisble] = useState(false);
+	const [authVisible, setAuthVisible] = useState(false);
 
 	const toggle = () => {
 		setNavVisisble(!navVisible);
 	};
+
 	return (
 		<>
+			{authVisible ? <Authorization></Authorization> : null}
 			<TopBar></TopBar>
 			<div className="header">
 				<div className="header__inner">
@@ -49,10 +53,13 @@ const Header = () => {
 						</div>
 					</div>
 					<div className="header__inner__right">
-						<Link to="/Login" className="header__inner__right__container">
+						<button
+							className="header__inner__right__container"
+							onClick={() => setAuthVisible(true)}
+						>
 							<People className="header__inner__right__container__logo"></People>
 							<div className="header__inner__right__container__item">Войти</div>
-						</Link>
+						</button>
 					</div>
 				</div>
 			</div>

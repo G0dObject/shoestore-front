@@ -1,0 +1,51 @@
+@import "./variables";
+.auth-modal {
+	position: fixed;
+	width: $authsizew;
+	height: $authsizeh;
+	background-color: white;
+	z-index: 30;
+	border-radius: 30px;
+	left: calc(50% - calc($authsizew / 2));
+	top: calc(50% - calc($authsizeh / 2));
+	&__header {
+		width: 100%;
+		display: flex;
+		height: fit-content;
+		justify-content: space-between;
+		&__right * {
+			color: black;
+		}
+		svg {
+			width: 30px;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+	&__main {
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		gap: 24px;
+	}
+	&__title {
+		font-size: 1.25rem;
+		line-height: 1.4;
+		font-weight: 600;
+		text-align: center;
+		color: $textcolor;
+	}
+	&__submit {
+		justify-content: center;
+		min-width: 48px;
+		height: 48px;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #5bc238;
+		border: 0;
+		border-radius: 30px;
+	}
+}
