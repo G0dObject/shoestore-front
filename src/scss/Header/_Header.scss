@@ -2,7 +2,7 @@
 
 .header {
 	color: white;
-	z-index: 5000;
+	z-index: 10;
 	width: 100%;
 	height: 80px;
 	background-color: $HeaderBackgroundColor;
@@ -70,6 +70,12 @@
 					@media only screen and (max-width: $small) {
 					}
 				}
+			}
+		}
+		&__right {
+			button {
+				border: none;
+				background-color: transparent;
 			}
 		}
 	}
