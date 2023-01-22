@@ -13,6 +13,11 @@ const slides: Slider[] = [
 		backgroundColor: "rgb(211, 143, 60)",
 		id: 2,
 	},
+	{
+		src: "https://cdn.zenden.cloud/btk6NhoSFCxwf9TToorouiNH_GLYI1jkpwjQnlgE1Zk/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay80NTIvdHp6ejd1bjUycXlzNXhycG15ZXptbGsydHV4bjh4YW0uanBn.jpg",
+		backgroundColor: "#ff3334",
+		id: 3,
+	},
 ];
 const Main = () => {
 	return (
