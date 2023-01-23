@@ -2,7 +2,9 @@
 	color: white;
 	text-decoration: none;
 }
-
+*:focus {
+	outline: none;
+}
 *,
 *::before,
 *::after {
