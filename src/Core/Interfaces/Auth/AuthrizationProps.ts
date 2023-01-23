@@ -1,0 +1,3 @@
+interface AuthrizationProps{
+    closeCallback: () => void;
+}

@@ -1,5 +1,6 @@
-@import "./variables";
+@import './variables';
 .auth-modal {
+	border: 2px solid whitesmoke;
 	position: fixed;
 	width: $authsizew;
 	height: $authsizeh;
@@ -47,5 +48,87 @@
 		background-color: #5bc238;
 		border: 0;
 		border-radius: 30px;
+	}
+}
+.input {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 48px;
+	color: #303030;
+	background: #fff;
+	-webkit-transition: border-color 0.25s;
+	transition: border-color 0.25s;
+	padding: 0 12px 0 24px;
+	font-size: 100%;
+	line-height: 1.5;
+	border: 1px solid #c7c7c7;
+	border-radius: 24px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	&__login {
+		color: black;
+		appearance: none;
+		border-radius: 0;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		vertical-align: top;
+		background: 0 0;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		padding: 0;
+		display: inline-block;
+		width: 0;
+		border: 0;
+	}
+	&__password {
+		color: black;
+		appearance: none;
+		border-radius: 0;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		vertical-align: top;
+		background: 0 0;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		padding: 0;
+		display: inline-block;
+
+		border: 0;
+	}
+}
+*button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.auth-modal__toggle {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-content: center;
+	&__checkbox {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	&__label {
+		color: #000;
+		text-align: center;
 	}
 }

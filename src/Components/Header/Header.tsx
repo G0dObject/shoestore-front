@@ -1,11 +1,10 @@
-import React from "react";
-import "../../scss/Header/_import.scss";
-import TopBar from "./TopBar";
-import Zenden from "../../res/Zenden";
-import People from "../../res/People";
-import NavBarIcon from "../../res/NavBarIcon";
-import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
+import NavBarIcon from "../../res/NavBarIcon";
+import People from "../../res/People";
+import Zenden from "../../res/Zenden";
+import "../../scss/Header/_import.scss";
+import NavBar from "./NavBar";
+import TopBar from "./TopBar";
 
 import { useState } from "react";
 import Authorization from "../Auth/Authorization";
@@ -16,10 +15,13 @@ const Header = () => {
 	const toggle = () => {
 		setNavVisisble(!navVisible);
 	};
+	const toggleauth = () => {
+		setAuthVisible(false);
+	};
 
 	return (
 		<>
-			{authVisible ? <Authorization></Authorization> : null}
+			{authVisible ? <Authorization closeCallback={toggleauth} ></Authorization> : null}
 			<TopBar></TopBar>
 			<div className="header">
 				<div className="header__inner">
