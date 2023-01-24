@@ -1,6 +1,6 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import MainPages from "./pages/MainPages";
-import TestPages from "./pages/TestPages";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CatalogPages from './pages/CatalogPages';
+import MainPages from './pages/MainPages';
 const App = () => {
 	return (
 		<>
@@ -9,13 +9,13 @@ const App = () => {
 					<Route path="/" element={<MainPages />}></Route>
 					<Route
 						path="/catalog/:category/:type/:id"
-						element={<TestPages></TestPages>}
+						element={<CatalogPages></CatalogPages>}
 					/>
 					<Route
 						path="/catalog/:category/:type/"
-						element={<TestPages></TestPages>}
+						element={<CatalogPages></CatalogPages>}
 					/>
-					<Route path="/catalog/:category/" element={<TestPages></TestPages>} />
+					<Route path="/catalog/:category/" element={<CatalogPages></CatalogPages>} />
 					<Route path="*" element={<>Элемент не найден</>} />
 				</Routes>
 			</BrowserRouter>
