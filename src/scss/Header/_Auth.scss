@@ -1,14 +1,16 @@
 @import './variables';
+
 .auth-modal {
 	border: 2px solid whitesmoke;
 	position: fixed;
 	width: $authsizew;
-	height: $authsizeh;
+	height: fit-content;
 	background-color: white;
 	z-index: 30;
 	border-radius: 30px;
 	left: calc(50% - calc($authsizew / 2));
 	top: calc(50% - calc($authsizeh / 2));
+
 	&__header {
 		width: 100%;
 		display: flex;
@@ -45,6 +47,7 @@
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 30px;
 		background-color: #5bc238;
 		border: 0;
 		border-radius: 30px;
@@ -71,6 +74,24 @@
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	&__email {
+		color: black;
+		appearance: none;
+		border-radius: 0;
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		vertical-align: top;
+		background: 0 0;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		padding: 0;
+		display: inline-block;
+		width: 0;
+		border: 0;
+	}
 	&__login {
 		color: black;
 		appearance: none;

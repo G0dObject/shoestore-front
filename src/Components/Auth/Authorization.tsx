@@ -1,12 +1,14 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { store } from '../..';
 import '../../scss/Header/_import.scss';
 const Authorization = (props: AuthrizationProps) => {
-	let register = false;
+	const [register, setRegister] = useState(false);
+
 	const Login = useRef<HTMLInputElement | null>(null);
 	const Password = useRef<HTMLInputElement | null>(null);
-	const Authorize = (login: string, password: string) => {
-		register ? store.registration(password, login, password) : store.login(login, password);
+	const Email = useRef<HTMLInputElement | null>(null);
+	const Authorize = (email: string, login: string, password: string) => {
+		register ? store.registration(email, login, password) : store.login(login, password);
 	};
 	return (
 		<div className="auth-modal">
@@ -32,15 +34,32 @@ const Authorization = (props: AuthrizationProps) => {
 			<div className="auth-modal__main">
 				<div className="auth-modal__title">ВХОД / РЕГИСТРАЦИЯ</div>
 				<div className="auth-modal__title">Введите свой Логин / Пароль</div>
+				{register ? (
+					<div className="auth-modal__login">
+						<label className="input">
+							<input
+								ref={Login}
+								type="text"
+								name="login"
+								id="login"
+								className="input__login"
+								placeholder="Логин"
+								inputMode="text"></input>
+						</label>
+					</div>
+				) : (
+					''
+				)}
+
 				<div className="auth-modal__login">
 					<label className="input">
 						<input
-							ref={Login}
+							ref={Email}
 							type="text"
-							name="login"
-							id="login"
-							className="input__login"
-							placeholder="Логин"
+							name="email"
+							id="email"
+							className="input__email"
+							placeholder="Почта"
 							inputMode="text"></input>
 					</label>
 				</div>
@@ -61,7 +80,7 @@ const Authorization = (props: AuthrizationProps) => {
 						className="auth-modal__toggle_checkbox"
 						type="checkbox"
 						onClick={() => {
-							register = !register;
+							setRegister(!register);
 						}}></input>
 					<label className="auth-modal__toggle__label">Создать аккаунт?</label>
 				</div>
@@ -69,6 +88,7 @@ const Authorization = (props: AuthrizationProps) => {
 				<button
 					onClick={() => {
 						Authorize(
+							Email.current?.value as string,
 							Login.current?.value as string,
 							Password.current?.value as string,
 						);
