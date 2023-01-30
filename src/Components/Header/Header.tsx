@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
-import NavBarIcon from "../../res/NavBarIcon";
-import People from "../../res/People";
-import Zenden from "../../res/Zenden";
-import "../../scss/Header/_import.scss";
-import NavBar from "./NavBar";
-import TopBar from "./TopBar";
+import { Link } from 'react-router-dom';
+import NavBarIcon from '../../res/NavBarIcon';
+import Zenden from '../../res/Zenden';
+import '../../scss/Header/_import.scss';
+import NavBar from './NavBar';
+import TopBar from './TopBar';
 
-import { useState } from "react";
-import Authorization from "../Auth/Authorization";
+import { useState } from 'react';
+import Authorization from '../Auth/Authorization';
+import HeaderUserSide from './HeaderUserSide';
+
 const Header = () => {
 	const [navVisible, setNavVisisble] = useState(false);
 	const [authVisible, setAuthVisible] = useState(false);
@@ -15,13 +16,17 @@ const Header = () => {
 	const toggle = () => {
 		setNavVisisble(!navVisible);
 	};
-	const toggleauth = () => {
+	const toggleoffauth = () => {
+		console.log('no');
 		setAuthVisible(false);
+	};
+	const toggleauth = () => {
+		setAuthVisible(!authVisible);
 	};
 
 	return (
 		<>
-			{authVisible ? <Authorization closeCallback={toggleauth} ></Authorization> : null}
+			{authVisible ? <Authorization closeCallback={toggleoffauth}></Authorization> : null}
 			<TopBar></TopBar>
 			<div className="header">
 				<div className="header__inner">
@@ -29,23 +34,21 @@ const Header = () => {
 						<Link to="/" className="header__inner__left__container">
 							<NavBarIcon
 								className="header__sidebar__toggle"
-								toggle={toggle}
-							></NavBarIcon>
+								toggle={toggle}></NavBarIcon>
 
 							<Zenden className="header__inner__left__container__logo" />
 						</Link>
 						<NavBar
-							className={navVisible ? "sidenav show" : "sidenav hide"}
-							onClick={toggle}
-						></NavBar>
+							className={navVisible ? 'sidenav show' : 'sidenav hide'}
+							onClick={toggle}></NavBar>
 					</div>
 					<div className="header__inner__center">
 						<div className="nav">
 							<ul className="nav__list">
-								<Link to="/catalog/woman" className="nav__item">
+								<Link to="/catalog/man" className="nav__item">
 									Мужчинам
 								</Link>
-								<Link to="/catalog/man" className="nav__item">
+								<Link to="/catalog/woman" className="nav__item">
 									Женщинам
 								</Link>
 								<Link to="/catalog/kids" className="nav__item">
@@ -54,17 +57,10 @@ const Header = () => {
 							</ul>
 						</div>
 					</div>
-					<div className="header__inner__right">
-						<button
-							className="header__inner__right__container"
-							onClick={() => setAuthVisible(true)}
-						>
-							<People className="header__inner__right__container__logo"></People>
-							<div className="header__inner__right__container__item">Войти</div>
-						</button>
-					</div>
+					<HeaderUserSide callbackauth={toggleauth}></HeaderUserSide>
 				</div>
 			</div>
+			<div className="notification"></div>
 		</>
 	);
 };

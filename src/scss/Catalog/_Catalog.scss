@@ -1,0 +1,40 @@
+@import '.././variables';
+.catalog-section__main {
+	display: flex;
+	-ms-flex-wrap: wrap;
+	width: $InnerWidth;
+	margin-left: auto;
+	margin-right: auto;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+	padding-left: 0;
+	padding-right: 0;
+}
+.catalog-section__label {
+	color: black;
+	padding-bottom: 24px;
+}
+.catalog-section__sidebar {
+	padding-bottom: 24px;
+	width: 16.7857142857%;
+}
+.catalog-breadcrumbs {
+	flex: 1 0 100%;
+}
+.catalog-section__content {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width: 72.6785714286%;
+}
+.catalog-section__list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.catalog-section__card__header {
+	font-size: 1.25rem;
+}

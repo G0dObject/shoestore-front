@@ -52,8 +52,10 @@ export default class Store {
 
 	async registration(username:string, email:string, password:string) {
 		try {
+			console.log(username, email, password);
+			
 			await AuthService.registration(username, email, password).then(() =>
-				this.login(email, password)
+				this.login(email,password)
 			);
         } catch (e:any) {
 			console.log(e.response?.data?.message);

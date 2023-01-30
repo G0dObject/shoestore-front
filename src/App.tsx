@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CatalogPages from './pages/CatalogPages';
 import MainPages from './pages/MainPages';
+
 const App = () => {
 	return (
 		<>

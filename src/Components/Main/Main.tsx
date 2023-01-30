@@ -1,38 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../scss/Main/_import.scss";
-import Slider from "./Slider";
+import { Link } from 'react-router-dom';
+import '../../scss/Main/_import.scss';
+import Slider from './Slider';
 const slides: Slider[] = [
 	{
-		src: "https://cdn.zenden.cloud/MaKYRQQbsC6VRYFpyomnLAncJZpTjOY1NHQlRNHkzzw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay85OGQvMjAwOTBxaHh1bG1wZmVuZjAxcGNvOWpraG1xbWlleG0uanBn.jpg",
-		backgroundColor: "#e3e2e8",
+		src: 'https://cdn.zenden.cloud/MaKYRQQbsC6VRYFpyomnLAncJZpTjOY1NHQlRNHkzzw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay85OGQvMjAwOTBxaHh1bG1wZmVuZjAxcGNvOWpraG1xbWlleG0uanBn.jpg',
+		backgroundColor: '#e3e2e8',
 		id: 1,
 	},
 	{
-		src: "https://cdn.zenden.cloud/NhDiU_W6tH02jC5mvG9-U6yBmSZj_Bjn-z3a7UGHyqw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay9lNGYvN3ZwbmtwbjB5ZXB2aG5leGc5a2MydGx3NHdlcGsxcTYuanBn.jpg",
-		backgroundColor: "rgb(211, 143, 60)",
+		src: 'https://cdn.zenden.cloud/NhDiU_W6tH02jC5mvG9-U6yBmSZj_Bjn-z3a7UGHyqw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay9lNGYvN3ZwbmtwbjB5ZXB2aG5leGc5a2MydGx3NHdlcGsxcTYuanBn.jpg',
+		backgroundColor: 'rgb(211, 143, 60)',
 		id: 2,
 	},
 	{
-		src: "https://cdn.zenden.cloud/btk6NhoSFCxwf9TToorouiNH_GLYI1jkpwjQnlgE1Zk/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay80NTIvdHp6ejd1bjUycXlzNXhycG15ZXptbGsydHV4bjh4YW0uanBn.jpg",
-		backgroundColor: "#ff3334",
+		src: 'https://cdn.zenden.cloud/btk6NhoSFCxwf9TToorouiNH_GLYI1jkpwjQnlgE1Zk/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay80NTIvdHp6ejd1bjUycXlzNXhycG15ZXptbGsydHV4bjh4YW0uanBn.jpg',
+		backgroundColor: '#ff3334',
 		id: 3,
+	},
+	{
+		src: 'https://cdn.zenden.cloud/26ergs9MSWI-67sMmLMBdeeNg6-DqYU96kpLp4Vfk4A/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay9lYzUvNzBtbHFkemljd2Z6Yjc5cWFvMW5ldjR6bDd2OG93c24uanBn.jpg',
+		backgroundColor: '#1a1a1a',
+		id: 4,
 	},
 ];
 const Main = () => {
 	return (
 		<div className="page__main">
-			<div className="notification"></div>
 			<Slider slides={slides} className="swiper-container">
 				<img src="https://cdn.zenden.cloud/MaKYRQQbsC6VRYFpyomnLAncJZpTjOY1NHQlRNHkzzw/fit/768/520/ce/0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay85OGQvMjAwOTBxaHh1bG1wZmVuZjAxcGNvOWpraG1xbWlleG0uanBn.jpg"></img>
 			</Slider>
 			<div className="page__main__inner">
 				<div className="categories-section">
 					<div className="categories-section__main">
-						<Link
-							to="/catalog/woman"
-							className="categories-section__item woman"
-						>
+						<Link to="/catalog/woman" className="categories-section__item woman">
 							<div className="categories-section__item__title">Женщинам</div>
 							<div className="categories-selection__item__inner">
 								<div className="categories-selection__item__inner__image">

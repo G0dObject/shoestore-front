@@ -8,7 +8,9 @@ const Authorization = (props: AuthrizationProps) => {
 	const Password = useRef<HTMLInputElement | null>(null);
 	const Email = useRef<HTMLInputElement | null>(null);
 	const Authorize = (email: string, login: string, password: string) => {
-		register ? store.registration(email, login, password) : store.login(login, password);
+		console.log(register);
+
+		register ? store.registration(login, email, password) : store.login(email, password);
 	};
 	return (
 		<div className="auth-modal">

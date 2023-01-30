@@ -1,0 +1,21 @@
+.catalog-section__card {
+	* {
+		color: black;
+	}
+	min-height: 200px;
+	width: calc(30% - 24px);
+	min-width: 180px;
+	max-width: 200px;
+	padding: 2px;
+	background-color: antiquewhite;
+	margin: 0 16px 56px;
+	&__catalog-section__card__header * {
+		width: min-content;
+	}
+	&__title {
+		text-align: center;
+	}
+	&__price {
+		text-align: start;
+	}
+}

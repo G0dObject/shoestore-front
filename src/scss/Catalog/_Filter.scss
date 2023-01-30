@@ -1,0 +1,38 @@
+.filter * {
+	color: black;
+}
+.filter {
+	&__inner {
+		position: static;
+		overflow: visible;
+	}
+	&__title {
+		font-size: 1.25rem;
+		line-height: 1.4;
+		margin: 0;
+		font-weight: 600;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding: 0;
+	}
+	&__section {
+		border: 0;
+		padding: 0;
+	}
+	&__content {
+		padding: 24px 0 12px;
+	}
+}
+.categories-list__item {
+	margin-bottom: 16px;
+	font-size: 0.875rem;
+	line-height: 1.4285714286;
+	list-style: none;
+}

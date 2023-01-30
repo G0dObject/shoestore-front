@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './App.css';
@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 export const store = new Store();
 export const Context = createContext(store);
 root.render(
-	<React.StrictMode>
-		<Context.Provider value={store}>
-			<App />
-		</Context.Provider>
-	</React.StrictMode>,
+	//<React.StrictMode>
+	<Context.Provider value={store}>
+		<App />
+	</Context.Provider>,
+	//</React.StrictMode>,
 );
